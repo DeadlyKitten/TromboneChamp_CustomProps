@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Custom Props", "Custom Props\CustomProps.csproj", "{10746039-C7BD-4AFA-B541-80117C68F9ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Custom Props-Editor", "Custom Props-Editor\CustomProps-Editor.csproj", "{BB62D9B3-4E94-4957-9A23-5ED2AD0F5D58}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10746039-C7BD-4AFA-B541-80117C68F9ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10746039-C7BD-4AFA-B541-80117C68F9ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10746039-C7BD-4AFA-B541-80117C68F9ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10746039-C7BD-4AFA-B541-80117C68F9ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB62D9B3-4E94-4957-9A23-5ED2AD0F5D58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB62D9B3-4E94-4957-9A23-5ED2AD0F5D58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB62D9B3-4E94-4957-9A23-5ED2AD0F5D58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB62D9B3-4E94-4957-9A23-5ED2AD0F5D58}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9FB28A5C-6DF3-4737-A4D7-C9EDDE6A8C66}
+	EndGlobalSection
+EndGlobal
