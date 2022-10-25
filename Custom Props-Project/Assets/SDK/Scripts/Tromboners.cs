@@ -81,9 +81,9 @@ public class Tromboners : MonoBehaviour
 
             prop.transform.parent = tromboner.transform.FindRecursive(oldTransformName);
 
-            prop.transform.localPosition = prop.positionOffsets[(int) activeTromboner];
-            prop.transform.localRotation = Quaternion.Euler(prop.rotationOffsets[(int) activeTromboner]);
-            prop.transform.localScale = prop.scaleOffsets[(int) activeTromboner];
+            prop.transform.localPosition = prop.positionOffsets[(int)activeTromboner];
+            prop.transform.localRotation = Quaternion.Euler(prop.rotationOffsets[(int)activeTromboner]);
+            prop.transform.localScale = prop.scaleOffsets[(int)activeTromboner];
         }
     }
 
@@ -109,6 +109,19 @@ public class Tromboners : MonoBehaviour
         SceneHierarchyUtility.SetExpanded(male1, false);
         SceneHierarchyUtility.SetExpanded(female0, false);
         SceneHierarchyUtility.SetExpanded(female1, false);
+    }
+
+    public Transform GetActiveTrombonerTransform()
+    {
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            var current = transform.GetChild(i);
+
+            if (current.gameObject.activeSelf)
+                return current;
+        }
+
+        return null;
     }
 
     void Expand(GameObject go) => SceneHierarchyUtility.SetExpanded(go, true);
