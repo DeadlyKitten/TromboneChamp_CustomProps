@@ -18,17 +18,22 @@ public class CustomPropEditor : Editor
         EditorGUI.BeginDisabledGroup(string.IsNullOrEmpty(prop.propName) || string.IsNullOrEmpty(prop.authorName) || string.IsNullOrEmpty(prop.attachBone));
 
         EditorGUILayout.BeginHorizontal();
+        EditorGUI.BeginChangeCheck();
 
         if (GUILayout.Button("Save Offset"))
         {
             var tromboners = FindObjectOfType<Tromboners>();
             var modelType = (int)tromboners.activeTromboner;
+            Undo.RecordObject(prop, "Saved Offset");
+            PrefabUtility.RecordPrefabInstancePropertyModifications(prop);
             prop.SaveOffset(modelType);
             Debug.Log("Offset Saved!");
         }
 
         if (GUILayout.Button("Save All Offsets"))
         {
+            Undo.RecordObject(prop, "Saved All Offsets");
+            PrefabUtility.RecordPrefabInstancePropertyModifications(prop);
             prop.SaveAllOffsets();
             Debug.Log("Offsets Saved!");
 
